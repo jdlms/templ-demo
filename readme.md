@@ -53,31 +53,33 @@ go run cmd/server/main.go
 ```
 templ-demo/
 ├── cmd/
-│ └── server/
-│ └── main.go
+│   └── server/
+│       └── main.go
 ├── internal/
-│ └── handlers/
-│ └── handlers.go
+│   └── handlers/
+│       └── handlers.go
 ├── web/
-│ ├── templates/
-│ │ ├── main.templ
-│ │ └── hello.templ
-│ ├── components/
-│ │ ├── Counter.jsx
-│ │ └── desk/
-│ │ ├── Container.tsx
-│ │ ├── Loader.tsx
-│ │ └── Spinner.tsx
-│ ├── static/
-│ │ ├── models/
-│ │ │ └── Desk.glb
-│ │ └── dist/
-│ │ └── (built files)
-│ └── index.js
-├── input.css
-├── postcss.config.js
-├── go.mod
-├── go.sum
+│   ├── templates/
+│   │   ├── main.templ
+│   │   └── hello.templ
+│   ├── components/
+│   │   ├── Counter.jsx
+│   │   └── desk/
+│   │       ├── Container.tsx
+│   │       ├── Loader.tsx
+│   │       └── Spinner.tsx
+│   ├── static/
+│   │   ├── assets/
+│   │   │   └── styles.css (generated)
+│   │   ├── dist/
+│   │   │   └── (built React files)
+│   │   └── models/
+│   │       └── Desk.glb
+│   ├── input.css (Tailwind source)
+│   ├── postcss.config.js
+│   ├── vite.config.js
+│   └── index.js
 ├── package.json
-└── vite.config.js
+├── go.mod
+└── go.sum
 ```

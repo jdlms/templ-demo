@@ -19,7 +19,7 @@
   "scripts": {
     "build": "esbuild --bundle web/index.js --outdir=web/static/dist --minify --global-name=bundle",
     "dev": "esbuild --bundle web/index.js --outdir=web/static/dist --watch --global-name=bundle",
-    "build-css": "postcss input.css -o web/static/assets/styles.css",
-    "dev-css": "postcss input.css -o web/static/assets/styles.css --watch"
+    "build-css": "postcss web/input.css -o web/static/assets/styles.css --config web/postcss.config.js",
+    "dev-css": "postcss web/input.css -o web/static/assets/styles.css --config web/postcss.config.js --watch"
   }
 }
