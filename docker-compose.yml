@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  templ-demo:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - ENV=production
+    restart: unless-stopped
+
+  # Development service with volume mounts for hot reloading
+  templ-demo-dev:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - ENV=development
+    profiles:
+      - dev
+    restart: unless-stopped
