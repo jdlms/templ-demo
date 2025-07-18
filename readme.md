@@ -6,6 +6,9 @@
 # Install dependencies
 npm install
 
+# Build Tailwind CSS
+npm run build-css
+
 # Build React components
 npm run build
 

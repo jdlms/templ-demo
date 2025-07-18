@@ -17,6 +17,7 @@ func SetupRoutes() {
 
 	// Serve static files (for your bundled JS and assets)
 	http.Handle("/dist/", http.StripPrefix("/dist/", http.FileServer(http.Dir("./web/static/dist/"))))
+	http.Handle("/assets/", http.StripPrefix("/assets/", http.FileServer(http.Dir("./web/static/assets/"))))
 
 	// Serve 3D models
 	http.Handle("/models/", http.StripPrefix("/models/", http.FileServer(http.Dir("./web/static/models/"))))

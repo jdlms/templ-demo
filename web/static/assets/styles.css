@@ -1,0 +1,19 @@
+/*! tailwindcss v4.1.11 | MIT License | https://tailwindcss.com */
+.visible {
+  visibility: visible;
+}
+.static {
+  position: static;
+}
+.flex {
+  display: flex;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.justify-center {
+  justify-content: center;
+}
+.rounded-full {
+  border-radius: calc(infinity * 1px);
+}
