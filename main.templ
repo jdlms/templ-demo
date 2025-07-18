@@ -1,0 +1,35 @@
+package main
+
+templ mainPage() {
+	<html>
+		<head>
+			<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+			<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+			<title>Main Page</title>
+		</head>
+		<body>
+			<h1>Main Page</h1>
+			<a href="/second">Go to Second Page</a>
+			<script src="/dist/index.js"></script>
+			<div id="counter-root">
+				<script>
+					bundle.renderCounter(document.currentScript.closest('div'));
+				</script>
+			</div>
+			<div id="desk-root">
+				<script>
+					bundle.renderDesk(document.currentScript.closest('div'));
+				</script>
+			</div>
+		</body>
+	</html>
+}
+
+templ secondPage() {
+	<html>
+		<body>
+			<h1>Second Page</h1>
+			<a href="/">Back to Main Page</a>
+		</body>
+	</html>
+}
