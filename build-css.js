@@ -6,7 +6,7 @@ const postcss = require("postcss");
 async function buildCSS() {
   const inputCSS = fs.readFileSync("./input.css", "utf8");
 
-  const result = await postcss([tailwindcss("./tailwind.config.js")]).process(
+  const result = await postcss([tailwindcss]).process(
     inputCSS,
     { from: "./input.css", to: "./web/static/assets/styles.css" }
   );
