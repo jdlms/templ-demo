@@ -1,7 +1,7 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import Counter from "./Counter.jsx";
-import { Container } from "./desk/Container.tsx";
+import Counter from "./components/Counter.jsx";
+import { Container } from "./components/desk/Container.tsx";
 
 // Export function to render the Counter component
 export function renderCounter(element) {

@@ -1,4 +1,4 @@
-module github.com/a-h/templ-examples/hello-world
+module templ-demo
 
 go 1.24.3
 

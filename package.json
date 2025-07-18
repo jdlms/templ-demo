@@ -13,7 +13,7 @@
     "esbuild": "^0.19.0"
   },
   "scripts": {
-    "build": "esbuild --bundle index.js --outdir=dist --minify --global-name=bundle",
-    "dev": "esbuild --bundle index.js --outdir=dist --watch --global-name=bundle"
+    "build": "esbuild --bundle web/index.js --outdir=web/static/dist --minify --global-name=bundle",
+    "dev": "esbuild --bundle web/index.js --outdir=web/static/dist --watch --global-name=bundle"
   }
 }
