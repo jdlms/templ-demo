@@ -1,8 +1,12 @@
 import { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, extend } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { Loader } from "./Loader";
 import { Spinner } from "./Spinner";
+import * as THREE from "three";
+
+// Extend fiber with Three.js objects
+extend(THREE);
 
 export function Container() {
   return (
@@ -10,8 +14,17 @@ export function Container() {
       <Canvas
         style={{ height: "80%", width: "80%" }}
         camera={{ position: [0, 7, -10], fov: 75 }}
-        className="bg-neutral-800 w-44 h-44 md:h-64 md:w-64 cursor-pointer rounded-full  shadow-inner"
+        className="cursor-pointer rounded-full"
       >
+        {/* @ts-ignore */}
+        <ambientLight intensity={2} />
+        {/* @ts-ignore */}
+        <pointLight
+          position={[0, 18, -10]}
+          intensity={500}
+          color="#fff"
+          distance={0}
+        />
         <Suspense fallback={<Spinner />}>
           <Loader />
         </Suspense>
