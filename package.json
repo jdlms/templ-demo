@@ -13,12 +13,13 @@
     "@tailwindcss/postcss": "^4.1.11",
     "esbuild": "^0.19.0",
     "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
     "tailwindcss": "^4.1.11"
   },
   "scripts": {
     "build": "esbuild --bundle web/index.js --outdir=web/static/dist --minify --global-name=bundle",
     "dev": "esbuild --bundle web/index.js --outdir=web/static/dist --watch --global-name=bundle",
-    "build-css": "node build-css.js",
-    "dev-css": "node build-css.js"
+    "build-css": "postcss input.css -o web/static/assets/styles.css",
+    "dev-css": "postcss input.css -o web/static/assets/styles.css --watch"
   }
 }
