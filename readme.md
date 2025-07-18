@@ -1,5 +1,7 @@
 # Templ Demo
 
+An experiment to use React in Go Templ templates with Tailwind.
+
 ## Development Commands
 
 ```bash
