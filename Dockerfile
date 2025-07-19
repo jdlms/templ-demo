@@ -1,5 +1,8 @@
 # Multi-stage build
-FROM node:18-alpine AS frontend-builder
+FROM node:22-alpine AS frontend-builder
+
+# Update Alpine packages
+RUN apk update && apk upgrade
 
 WORKDIR /app
 
@@ -16,7 +19,10 @@ COPY web/ ./web/
 RUN npm run build-css && npm run build
 
 # Go build stage
-FROM golang:1.21-alpine AS go-builder
+FROM golang:1.23-alpine AS go-builder
+
+# Update Alpine packages
+RUN apk update && apk upgrade
 
 # Install templ
 RUN go install github.com/a-h/templ/cmd/templ@latest
