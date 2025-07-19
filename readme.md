@@ -1,6 +1,6 @@
 # Templ Demo
 
-An experiment to use React in Go Templ templates with Tailwind CSS v4.
+An experiment to use React in Go Templ templates.
 
 ## Setup & Build Commands
 
