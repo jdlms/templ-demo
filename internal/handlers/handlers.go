@@ -25,7 +25,7 @@ func SetupRoutes() {
 	http.Handle("/", templ.Handler(templates.MainPage()))
 
 	// Handle second page
-	http.Handle("/second", templ.Handler(templates.SecondPage()))
+	// http.Handle("/second", templ.Handler(templates.SecondPage()))
 
 	// API endpoints
 	http.HandleFunc("/api/counter", handleCounter)

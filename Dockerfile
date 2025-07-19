@@ -54,9 +54,6 @@ COPY --from=go-builder /app/main .
 # Copy static assets from frontend build
 COPY --from=frontend-builder /app/web/static ./web/static
 
-# Copy other web assets that might be needed
-COPY web/static ./web/static
-
 EXPOSE 3000
 
 CMD ["./main"]

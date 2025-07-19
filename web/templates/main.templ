@@ -9,14 +9,18 @@ templ MainPage() {
 			<title>Test</title>
 		</head>
 		<body class="bg-blue-100 text-red-500">
-			<h1 class="text-xl font-bold">Go templating with React test</h1>
-			<a href="/second">Go to Second Page</a>
+			<div class="flex flex-col justify-center items-center h-screen">
+				<h1 class="text-center text-xl font-bold">Go templating test</h1>
+				// <a class="text-center" href="/second">Go to Second Page</a>
+			</div>
+			<p class="text-amber-900 text-center">React counter linked to server-side key-value store:</p>
 			<script src="/dist/index.js"></script>
-			<div id="counter-root">
+			<div class="flex items-center justify-center h-screen" id="counter-root">
 				<script>
 					bundle.renderCounter(document.currentScript.closest('div'));
 				</script>
 			</div>
+			<p class="text-amber-900 text-center">React component:</p>
 			<div id="desk-root">
 				<script>
 					bundle.renderDesk(document.currentScript.closest('div'));
@@ -26,11 +30,11 @@ templ MainPage() {
 	</html>
 }
 
-templ SecondPage() {
-	<html>
-		<body>
-			<h1>Second Page</h1>
-			<a href="/">Back to Main Page</a>
-		</body>
-	</html>
-}
+// templ SecondPage() {
+// 	<html>
+// 		<body>
+// 			<h1>Second Page</h1>
+// 			<a href="/">Back to Main Page</a>
+// 		</body>
+// 	</html>
+// }
